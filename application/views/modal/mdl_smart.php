@@ -22,7 +22,7 @@
 										<input type="text" name="seri" class="form-control">
 									</div>
 								</div>
-							</div>
+							</div> 
 							<div class="row">
 								<div class="col">
 									<div class="form-group">

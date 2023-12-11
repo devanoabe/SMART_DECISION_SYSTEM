@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/vendor/sweetalert/dist/sweetalert2.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/vendor/summernote/summernote-bs4.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/vendor/datatables/dataTables.bootstrap4.css">
-</head>
+</head> 
 <body id="page-top">
 	<?php $p = $this->uri->segment(1); ?>
 	<div id="wrapper">

@@ -22,7 +22,7 @@
 			opacity: 0.98;
 		}
 	</style>
-</head>
+</head> 
 <body id="page-top">
 	<?php $p = $this->uri->segment(1); ?>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">

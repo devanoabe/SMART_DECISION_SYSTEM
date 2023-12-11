@@ -20,7 +20,7 @@
 								</a>
 							</div>
 						</div>
-					</div>
+					</div> 
 					<div class="col-md-4 mb-2">
 						<form method="POST" enctype="multipart/form-data" id="form_direct" action="pembobotan">
 							<div class="card border-info">

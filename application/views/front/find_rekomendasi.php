@@ -27,7 +27,7 @@
 					'</div>'
 				})
 			}
-		});
+		}); 
 	}
 </script>
 <?php $platform = $this->agent->platform(); ?>

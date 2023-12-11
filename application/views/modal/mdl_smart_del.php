@@ -13,7 +13,7 @@
 						<h4 class="font-weight-bold text-dark" id="smartphone_name"></h4>
 					</div>
 				</form>
-			</div>
+			</div> 
 			<div class="modal-footer form-group justify-content-center">
 				<button class="btn btn-sm btn-primary" id="del_smart">
 					<i class="fas fa-trash"></i>&nbsp; Ya, Hapus

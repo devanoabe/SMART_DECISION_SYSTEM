@@ -24,7 +24,7 @@
 					<i class="fas fa-fw fa-tachometer-alt"></i>
 					<span>Dashboard</span>
 				</a>
-			</li>
+			</li> 
 			<hr class="sidebar-divider">
 			<div class="sidebar-heading">Master</div>
 			<li class="nav-item">

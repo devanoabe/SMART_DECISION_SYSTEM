@@ -29,7 +29,7 @@
 			}
 		});
 	}
-</script>
+</script> 
 <?php
 $platform = $this->agent->platform();
 if ($platform=="Android" || $platform=="iOS") {

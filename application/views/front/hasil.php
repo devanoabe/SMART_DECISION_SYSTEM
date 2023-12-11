@@ -22,7 +22,7 @@ for ($j=0; $j < sizeof($result); $j++) {
 		];
 	}
 }
-?>
+?> 
 <?php
 $platform = $this->agent->platform();
 if ($platform=="Android" || $platform=="iOS") {

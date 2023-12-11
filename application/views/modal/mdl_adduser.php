@@ -20,7 +20,7 @@
 						<input type="text" class="form-control" name="nama_user" placeholder="Nama Lengkap">
 					</div>
 				</form>
-			</div>
+			</div> 
 			<div class="modal-footer form-group justify-content-center">
 				<button class="btn btn-sm btn-success" id="simp_adduser">
 					<i class="fas fa-save"></i>&nbsp; Simpan

@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="<?= base_url() ?>assets/fa/css/all.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/vendor/sweetalert/dist/sweetalert2.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/vendor/datatables/dataTables.bootstrap4.css">
-	<style type="text/css">
+	<style type="text/css"> 
 		body{
 			<?php
 			$pf = $this->agent->platform();

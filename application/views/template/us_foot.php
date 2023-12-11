@@ -11,7 +11,7 @@
 	<script src="<?= base_url() ?>assets/vendor/datatables/jquery.dataTables.js"></script>
 	<script src="<?= base_url() ?>assets/vendor/datatables/dataTables.bootstrap4.js"></script>
 	<?php $p = $this->uri->segment(1); ?>
-	<script type="text/javascript">
+	<script type="text/javascript"> 
 		function logout() {
 			Swal.fire({
 				confirmButtonClass: 'btn btn-success m-2',

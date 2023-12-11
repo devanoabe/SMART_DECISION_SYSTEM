@@ -24,7 +24,7 @@
 							<input type="password" name="password_conf" id="password_conf" class="form-control text-center" placeholder="Konfirmasi Password" required="yes">
 						</div>
 						<p class="text-danger text-center">Password minimal 6 karakter</p>
-					</div>
+					</div> 
 				</form>
 				<button class="btn btn-info btn-block" id="btn_cek_user">
 					<i class="fas fa-lock"></i>&nbsp;&nbsp;Konfirmasi User

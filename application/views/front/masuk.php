@@ -31,7 +31,7 @@
 							</div>
 						</div>
 					</div>
-				</form>
+				</form> 
 				<button class="btn btn-primary btn-block" id="btn_flogin">
 					<i class="fas fa-paper-plane"></i>&nbsp;&nbsp;Masuk
 				</button>

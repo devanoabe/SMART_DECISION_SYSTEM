@@ -15,7 +15,7 @@
 		background-size: cover;
 		border-radius: 50%;
 	}
-</style>
+</style> 
 <?php
 $d = $detail_con->row();
 $session = $this->session->userdata('user');

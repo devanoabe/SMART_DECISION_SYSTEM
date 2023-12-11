@@ -27,7 +27,7 @@
 						<label for="nama" class="small">Masukkan Nama</label>
 						<input type="text" min="6" name="nama" id="nama" class="form-control text-center" placeholder="Masukkan Nama Lengkap" autofocus required="yes">
 					</div>
-				</form>
+				</form> 
 				<button class="btn btn-info btn-block" id="btn_fdaftar">
 					<i class="fas fa-clipboard-list"></i>&nbsp;&nbsp;Buat Akun
 				</button>

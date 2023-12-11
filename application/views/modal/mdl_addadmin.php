@@ -19,7 +19,7 @@
 								<label>Password</label>
 								<input type="password" class="form-control" name="password" placeholder="Password">
 							</div>
-						</div>
+						</div> 
 						<div class="col">
 							<div class="form-group">
 								<label>Nama</label>

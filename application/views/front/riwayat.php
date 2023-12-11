@@ -19,7 +19,7 @@
 						<tbody id="show_log">
 						</tbody>
 					</table>
-				</div>
+				</div> 
 			<?php } else { ?>
 				<div class="alert alert-danger text-center mb-5" role="alert">** Anda Belum Melakukan Pencarian, Silahkan melakukan pencarian terlebih dahulu **</div>
 			<?php } ?>
