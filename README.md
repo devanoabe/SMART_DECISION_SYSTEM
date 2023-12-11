@@ -1,20 +1,24 @@
 # Project Tugas Akhir Sistem Pendukung Keputusan
 
-_Judul:_ __Implementasi Metode SMART Pada Sistem Rekomendasi Pemilihan Smartphone Android__
+
+Judul: __Implementasi Metode SMART Pada Sistem Rekomendasi Pemilihan Smartphone Android__
 
 # Kelompok 4
 * Abdullah Azzam | 2141720073
 * Al Akbar Baihaqi | 214172
 * Devano Abe | 2141720204
 
+
 > Seperti judul,
 > Project ini dibuat untuk implementasi metode SPK yaitu SMART (Simple Multi-Attribute Rating Technique) menggunakan framework CodeIgniter dan Bootstrap sebagai CSS
+
 
 ## Table of Contents
 * [Features](#features)
 * [Screenshots](#screenshots)
 	* [User Page](#user-page)
 	* [Admin Page](#admin-page)
+
 
 ## Features
 - [x] Framework CodeIgniter
@@ -35,10 +39,7 @@ _Judul:_ __Implementasi Metode SMART Pada Sistem Rekomendasi Pemilihan Smartphon
 - [x] Chart
 - [x] Searched data log
 - [x] Sorting data (part of pagination)
-- [ ] Rating System
-- [ ] DSS Method Implementation with Ajax \*still can't figured\*
 
-*Cukup Sekian* :+1:
 
 ## Screenshots
 
