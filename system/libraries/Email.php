@@ -1673,7 +1673,7 @@ class CI_Email {
 	// --------------------------------------------------------------------
 
 	/**
-	 * Send Email
+	 * Send E-mail
 	 *
 	 * @param	bool	$auto_clear = TRUE
 	 * @return	bool
