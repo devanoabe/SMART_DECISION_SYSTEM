@@ -1,10 +1,11 @@
-# Backup Project Tugas Akhir
+# Project Tugas Akhir Sistem Pendukung Keputusan
 
 _Judul:_ __Implementasi Metode SMART Pada Sistem Rekomendasi Pemilihan Smartphone Android__
 
-> Backup Program untuk TA :rocket:
-
-\*link for this repo : [git.io/om-smart](https://git.io/om-smart)\*
+# Kelompok 4
+* Abdullah Azzam | 2141720073
+* Al Akbar Baihaqi | 214172
+* Devano Abe | 2141720204
 
 > Seperti judul,
 > Project ini dibuat untuk implementasi metode SPK yaitu SMART (Simple Multi-Attribute Rating Technique) menggunakan framework CodeIgniter dan Bootstrap sebagai CSS
