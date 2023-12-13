@@ -15,7 +15,7 @@
 							<tr>
 								<th>No.</th>
 								<th>Waktu Perhitungan</th>
-								<th>Merk</th>
+								<th>Merk </th>
 								<th>Hasil Perhitungan</th>
 								<th>Dicari Oleh</th>
 							</tr>

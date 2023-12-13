@@ -1,4 +1,5 @@
 <?php
+
 function select_smart($id)
 {
 	$CI = get_instance();
@@ -11,4 +12,5 @@ function select_kriteria($id_kriteria)
 	$CI->load->model('M_admin','madmin');
 	return $CI->madmin->get_kriteria($id_kriteria);
 }
+
 ?>

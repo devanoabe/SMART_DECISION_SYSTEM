@@ -1,4 +1,5 @@
 <script type="text/javascript">
+	
 	function mdl_smart() {
 		document.getElementById("mdlhead").classList.remove('bg-warning');
 		document.getElementById("mdlhead").classList.add('bg-info');

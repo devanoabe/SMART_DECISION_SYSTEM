@@ -1,4 +1,5 @@
 <script type="text/javascript">
+	
 	function edt_pertanyaan(id) {
 		$.ajax({
 			type: "ajax",

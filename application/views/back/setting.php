@@ -45,6 +45,7 @@
 			</div>
 		</div>
 	</div>
+	
 	<div class="col">
 		<div class="card border-bottom-primary shadow mb-4">
 			<div class="card-header py-3">
