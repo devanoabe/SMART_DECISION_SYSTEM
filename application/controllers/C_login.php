@@ -19,8 +19,8 @@ class C_login extends CI_Controller {
 			redirect('beranda');
 		}
 		$data['title'] = 'Recommendation - Masuk';
-		$this->load->view('template/us_head', $data);
-		$this->load->view('front/masuk', $data);
+		$this->load->view('template/navbar', $data);
+		$this->load->view('depan/login', $data);
 		$this->load->view('template/us_foot', $data);
 	}
 
@@ -32,9 +32,9 @@ class C_login extends CI_Controller {
 		} else if ($this->session->userdata('user')) {
 			redirect('beranda');
 		}
-		$data['title'] = 'Recommendation - Mendaftar';
-		$this->load->view('template/us_head', $data);
-		$this->load->view('front/mendaftar', $data);
+		$data['title'] = 'Recommendation - Register';
+		$this->load->view('template/navbar', $data);
+		$this->load->view('depan/register', $data);
 		$this->load->view('template/us_foot', $data);
 	}
 	public function cekusername()
@@ -121,8 +121,8 @@ class C_login extends CI_Controller {
 			redirect('beranda');
 		}
 		$data['title'] = 'Recommendation - Lupa Password';
-		$this->load->view('template/us_head', $data);
-		$this->load->view('front/resetpass', $data);
+		$this->load->view('template/navbar', $data);
+		$this->load->view('depan/resetpass', $data);
 		$this->load->view('template/us_foot', $data);
 	}
 

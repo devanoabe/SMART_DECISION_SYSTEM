@@ -15,8 +15,8 @@ class C_user extends CI_Controller {
 		$data['title'] = 'Recommendation - Beranda';
 		$data['flash'] = $this->session->flashdata('berhasil');
 		$data['detail_con'] = $this->mconfig->det_conf();
-		$this->load->view('template/us_head', $data);
-		$this->load->view('front/dashboard', $data);
+		$this->load->view('template/navbar', $data);
+		$this->load->view('depan/dashboard', $data);
 		$this->load->view('modal/mdl_adduser', $data);
 		$this->load->view('template/us_foot', $data);
 	}
@@ -25,8 +25,8 @@ class C_user extends CI_Controller {
 	{
 		$data['title'] = 'Recommendation - Bantuan';
 		$data['detail_con'] = $this->mconfig->det_conf();
-		$this->load->view('template/us_head', $data);
-		$this->load->view('front/help', $data);
+		$this->load->view('template/navbar', $data);
+		$this->load->view('depan/help', $data);
 		$this->load->view('modal/mdl_adduser', $data);
 		$this->load->view('template/us_foot', $data);
 	}

@@ -77,7 +77,7 @@ $route['getkriteria/(:any)'] = 'c_proses/select_kriteria/$1';
 
 $route['masuk'] = 'c_login';
 $route['login'] = 'c_login';
-$route['mendaftar'] = 'c_login/register';
+$route['register'] = 'c_login/register';
 $route['cekusername'] = 'c_login/cekusername';
 $route['daftar_akun'] = 'c_login/user_register';
 $route['resetpass'] = 'c_login/reset_pass';

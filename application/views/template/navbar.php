@@ -3,8 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Sistem Rekomendasi Smartphone Android merupakan sistem yang merekomendasikan kepada pengguna dalam menentukan Smartphone Android yang sesuai dengan kriteria pengguna.">
-	<meta name="author" content="Fikri Omar">
 	<meta http-equiv='cache-control' content='no-cache'>
 	<meta http-equiv='expires' content='0'>
 	<meta http-equiv='pragma' content='no-cache'>
@@ -28,49 +26,52 @@
 				$pd='';
 			}
 			?>
-			background: linear-gradient(0deg, rgba(41,67,138,0.19091386554621848) 0%, rgba(14,14,14,0.7035189075630253) 100%), url(<?= base_url('assets/img/'.$img) ?>);
+			background: #1c1c1c;
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-attachment:fixed;
 			opacity: 0.98;
 		}
+		@media screen and (max-width: 768px) {
+		.colaps{
+			border-radius: 20px
+		}
+		p{
+			text-align: center;
+		}
+	}
 	</style>
 </head>
 <body id="page-top" class="sb-nav-fixed">
 	<?php $p = $this->uri->segment(1); ?>
 	<nav class="sb-topnav navbar navbar-expand-lg navbar-dark">
 		<div class="container">
-			<a class="navbar-brand" href="<?= base_url() ?>"><i class="fas fa-fw fa-mobile-alt"></i>&nbsp; Sistem Rekomendasi</a>
+			<a class="navbar-brand" href="<?= base_url() ?>">SmartSystem</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse" id="navbarText">
-				<ul class="navbar-nav ml-auto">
+			<div class="collapse navbar-collapse pt-2" id="navbarText">
+				<ul style="background: #222222; padding: 2px 20px; border-radius: 20px;" class="navbar-nav ml-auto">
 					<li class="nav-item <?php if($p == '' || $p == 'beranda'){echo "active font-weight-bold";} ?>">
-						<a class="nav-link" href="<?= base_url('beranda') ?>"><i class="fas fa-fw fa-home"></i>&nbsp;Beranda <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="<?= base_url('beranda') ?>">&nbsp;Beranda <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item <?php if($p == 'list' || $p == 'daftar'){echo "active font-weight-bold";} ?>">
-						<a class="nav-link" href="<?= base_url('daftar') ?>"><i class="fas fa-fw fa-list"></i>&nbsp;List Smartphone</a>
-					</li>
-					<li class="nav-item <?php if($p == 'find' || $p == 'cari' || $p == 'pembobotan' || $p == 'opsi'){echo "active font-weight-bold";} ?>">
-						<a class="nav-link" href="<?= base_url('opsi') ?>"><i class="fas fa-fw fa-search"></i>&nbsp;Cari Rekomendasi</a>
+						<a class="nav-link" href="<?= base_url('daftar') ?>"></i>&nbsp;Smartphone</a>
 					</li>
 					<li class="nav-item <?php if($p == 'help' || $p == 'bantuan'){echo "active font-weight-bold";} ?>">
-						<a class="nav-link" href="<?= base_url('bantuan') ?>"><i class="fas fa-fw fa-info"></i>&nbsp;Bantuan</a>
-					</li>
-					<li class="nav-item <?php if($p == 'riwayat'){echo "active font-weight-bold";} ?>">
-						<a class="nav-link" href="<?= base_url('riwayat') ?>"><i class="fas fa-fw fa-history"></i>&nbsp;Riwayat Pencarian</a>
+						<a class="nav-link" href="<?= base_url('bantuan') ?>"></i>&nbsp;Bantuan</a>
 					</li>
 				</ul>
 				<ul class="navbar-nav">
-					<li class="nav-item dropdown no-arrow">
+					<li class="nav-item dropdown no-arrow pt-3">
 						<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<p class=" d-lg-inline small"><i class="fas fa-fw fa-ellipsis-v"></i>&nbsp;&nbsp;
+							<p class="d-lg-inline small">
 								<?php
 								if ($this->session->userdata('user')) {
 									echo '<i class="fas fa-fw fa-user-circle"></i>&nbsp;'.$this->session->userdata('user')['nama'];
 								} else {
-									echo "Opsi";
+									echo '<h1 style="font-size: 14px; font-weight: bold; color: #333; background-color: #93f291; padding: 10px 20px; border-radius: 20px;">Pilihan</h1>';
+
 								}
 								?>
 							</p>
