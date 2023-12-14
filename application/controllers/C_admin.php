@@ -35,7 +35,7 @@ class C_admin extends CI_Controller {
 		if (!$sesi) {
 			redirect('beranda');
 		}
-		$data['title'] = 'Admin - Data Kriteria';
+		$data['title'] = '	Data Kriteria';
 		$this->load->view('template/ad_head', $data);
 		$this->load->view('back/data_kriteria', $data);
 		$this->load->view('template/ad_foot', $data);

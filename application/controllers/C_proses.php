@@ -20,8 +20,8 @@ class C_proses extends CI_Controller {
 			redirect('login');
 		}
 		$data['title'] = 'Recommendation - Cari Rekomendasi';
-		$this->load->view('template/us_head', $data);
-		$this->load->view('front/find_rekomendasi', $data);
+		$this->load->view('template/navbar', $data);
+		$this->load->view('depan/find_rekomendasi', $data);
 		$this->load->view('modal/mdl_adduser', $data);
 		$this->load->view('template/us_foot', $data);
 	}
@@ -33,8 +33,8 @@ class C_proses extends CI_Controller {
 		}
 		$data['title'] = 'Recommendation - Cari Rekomendasi';
 		$data['smartphone'] = $this->show_smartphone();
-		$this->load->view('template/us_head', $data);
-		$this->load->view('front/opsi', $data);
+		$this->load->view('template/navbar', $data);
+		$this->load->view('depan/opsi', $data);
 		$this->load->view('modal/mdl_adduser', $data);
 		$this->load->view('template/us_foot', $data);
 	}
@@ -53,8 +53,8 @@ class C_proses extends CI_Controller {
 		$data['smartphone'] = $this->show_smartphone();
 		$data['pertanyaan'] = $this->madmin->list_pertanyaan();
 		$data['title'] = 'Recommendation - Pembobotan';
-		$this->load->view('template/us_head', $data);
-		$this->load->view('front/bobot', $data);
+		$this->load->view('template/navbar', $data);
+		$this->load->view('depan/bobot', $data);
 		$this->load->view('modal/mdl_adduser', $data);
 		$this->load->view('template/us_foot', $data);
 	}
@@ -215,6 +215,14 @@ class C_proses extends CI_Controller {
 					} else if ($dataset[$i]->harga > 9000000) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 3;
 					} else if ($dataset[$i]->harga > 5000000) {
+						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 2;
+					} else {
+						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 1;
+					}
+				}
+				// Kriteria Chip
+				if ($j == 9) {
+					if ($dataset[$i]->chipset == "Snapdragon") {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 2;
 					} else {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 1;
@@ -432,8 +440,8 @@ class C_proses extends CI_Controller {
 		}
 		$data['title'] = 'Hasil Rekomendasi';
 		$data['limit'] = $limit;
-		$this->load->view('template/us_head', $data);
-		$this->load->view('front/hasil', $data);
+		$this->load->view('template/navbar', $data);
+		$this->load->view('depan/hasil', $data);
 		$this->load->view('modal/mdl_adduser', $data);
 		$this->load->view('template/us_foot', $data);
 	}
@@ -494,8 +502,8 @@ class C_proses extends CI_Controller {
 		}
 		$data['title'] = 'Recommendation - Riwayat Pencarian';
 		$data['status'] = $status;
-		$this->load->view('template/us_head', $data);
-		$this->load->view('front/riwayat', $data);
+		$this->load->view('template/navbar', $data);
+		$this->load->view('depan/riwayat', $data);
 		$this->load->view('modal/mdl_adduser', $data);
 		$this->load->view('template/us_foot', $data);
 	}

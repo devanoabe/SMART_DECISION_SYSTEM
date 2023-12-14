@@ -19,6 +19,7 @@ class M_admin extends CI_Model {
 		$q = $this->db->get();
 		return $q->result();
 	}
+
 	public function get_admin($id_admin)
 	{
 		$this->db->select('*');
@@ -28,6 +29,7 @@ class M_admin extends CI_Model {
 		$q = $this->db->get();
 		return $q->row();
 	}
+	
 	public function insert_admin($data)
 	{
 		$this->db->insert('tbl_admin', $data);
