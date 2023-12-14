@@ -13,7 +13,7 @@
 					?>
 					<input type="text" name="id_kriteria[]" value="<?= $row->id_kriteria ?>" hidden>
 					<p class="font-weight-bold"><?= $i; ?>. <?= $row->pertanyaan; ?></p>
-					<?php if ($row->id_kriteria != 9) { ?>
+					<?php if ($row->id_kriteria != 10) { ?>
 						<div class="custom-control custom-radio custom-control-inline">
 							<input type="radio" id="bbt<?= $i ?>" name="bobot<?= $i ?>" class="custom-control-input" value="20">
 							<label class="custom-control-label" for="bbt<?= $i ?>">Ya</label>

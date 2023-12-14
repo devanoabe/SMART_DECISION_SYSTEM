@@ -87,14 +87,17 @@ class C_proses extends CI_Controller {
 		$data = $this->setbobot($id_kriteria,$bobot);
 		$jum = 0;
 		$normalisasi = array();
+		//jumlahkan semua bobot
 		for($i = 0; $i < sizeof($data['bobot']); $i++){
 			$jum += $data['bobot'][$i];
 		}
+		//Hitung nilai normalisasi untuk setiap bobot dengan membagi bobot tersebut dengan jumlah total bobot.
 		for($i = 0; $i < sizeof($data['bobot']); $i++) {
 			$temp_normal = 0;
 			$temp_normal = $data['bobot'][$i] / $jum;
 			array_push($normalisasi, $temp_normal);
 		}
+		//Hasil normalisasi dan informasi kriteria dan bobotnya dikembalikan dalam bentuk array asosiatif ($result).
 		$result = array(
 			'id_kriteria' => $id_kriteria,
 			'bobot' => $bobot,
@@ -232,6 +235,7 @@ class C_proses extends CI_Controller {
 		}
 		return $subKriteria;
 	}
+	
 	// Menghitung Utilities Score dengan Rumus = (Cout-Cmin)/(Cmax-Cmin)
 	public function getValueUtilities($id_kriteria,$hp)
 	{
