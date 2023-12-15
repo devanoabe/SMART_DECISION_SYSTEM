@@ -19,7 +19,7 @@ class C_proses extends CI_Controller {
 		if (!$sesi) {
 			redirect('login');
 		}
-		$data['title'] = 'Recommendation - Cari Rekomendasi';
+		$data['title'] = 'Cari Rekomendasi';
 		$this->load->view('template/navbar', $data);
 		$this->load->view('depan/find_rekomendasi', $data);
 		$this->load->view('modal/mdl_adduser', $data);
@@ -31,7 +31,7 @@ class C_proses extends CI_Controller {
 		if (!$sesi) {
 			redirect('login');
 		}
-		$data['title'] = 'Recommendation - Cari Rekomendasi';
+		$data['title'] = 'Cari Rekomendasi';
 		$data['smartphone'] = $this->show_smartphone();
 		$this->load->view('template/navbar', $data);
 		$this->load->view('depan/opsi', $data);
@@ -52,7 +52,7 @@ class C_proses extends CI_Controller {
 		$data['hp'] = $hp;
 		$data['smartphone'] = $this->show_smartphone();
 		$data['pertanyaan'] = $this->madmin->list_pertanyaan();
-		$data['title'] = 'Recommendation - Pembobotan';
+		$data['title'] = 'Pembobotan';
 		$this->load->view('template/navbar', $data);
 		$this->load->view('depan/bobot', $data);
 		$this->load->view('modal/mdl_adduser', $data);
@@ -117,11 +117,11 @@ class C_proses extends CI_Controller {
 			for ($j=0; $j < sizeof($id_kriteria); $j++) {
 				// Kriteria Display
 				if ($j == 0) {
-					if ($dataset[$i]->display > 6.7) {
+					if ($dataset[$i]->display >= 6.7) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 4;
-					} else if ($dataset[$i]->display > 6.2) {
+					} else if ($dataset[$i]->display >= 6.2) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 3;
-					} else if ($dataset[$i]->display > 5.7) {
+					} else if ($dataset[$i]->display >= 5.7) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 2;
 					} else {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 1;
@@ -129,11 +129,11 @@ class C_proses extends CI_Controller {
 				}
 				// Kriteria RAM
 				if ($j == 1) {
-					if ($dataset[$i]->ram > 8) {
+					if ($dataset[$i]->ram >= 8) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 4;
-					} else if ($dataset[$i]->ram > 6) {
+					} else if ($dataset[$i]->ram >= 6) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 3;
-					} else if ($dataset[$i]->ram > 4) {
+					} else if ($dataset[$i]->ram >= 4) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 2;
 					} else {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 1;
@@ -141,11 +141,11 @@ class C_proses extends CI_Controller {
 				}
 				// Kriteria ROM
 				if ($j == 2) {
-					if ($dataset[$i]->rom > 256) {
+					if ($dataset[$i]->rom >= 256) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 4;
-					} else if ($dataset[$i]->rom > 128) {
+					} else if ($dataset[$i]->rom >= 128) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 3;
-					} else if ($dataset[$i]->rom > 64) {
+					} else if ($dataset[$i]->rom >= 64) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 2;
 					} else {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 1;
@@ -153,11 +153,11 @@ class C_proses extends CI_Controller {
 				}
 				// Kriteria Kamera Depan
 				if ($j == 3) {
-					if ($this->splithigh($dataset[$i]->kamera_depan) > 20) {
+					if ($this->splithigh($dataset[$i]->kamera_depan) >= 20) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 4;
-					} else if ($this->splithigh($dataset[$i]->kamera_depan) > 15) {
+					} else if ($this->splithigh($dataset[$i]->kamera_depan) >= 15) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 3;
-					} else if ($this->splithigh($dataset[$i]->kamera_depan) > 10) {
+					} else if ($this->splithigh($dataset[$i]->kamera_depan) >= 10) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 2;
 					} else {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 1;
@@ -165,11 +165,11 @@ class C_proses extends CI_Controller {
 				}
 				// Kriteria Kamera Belakang
 				if ($j == 4) {
-					if ($this->splithigh($dataset[$i]->kamera_belakang) > 45) {
+					if ($this->splithigh($dataset[$i]->kamera_belakang) >= 45) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 4;
-					} else if ($this->splithigh($dataset[$i]->kamera_belakang) > 30) {
+					} else if ($this->splithigh($dataset[$i]->kamera_belakang) >= 30) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 3;
-					} else if ($this->splithigh($dataset[$i]->kamera_belakang) > 15) {
+					} else if ($this->splithigh($dataset[$i]->kamera_belakang) >= 15) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 2;
 					} else {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 1;
@@ -177,11 +177,11 @@ class C_proses extends CI_Controller {
 				}
 				// Kriteria CPU
 				if ($j == 5) {
-					if (preg_replace('/[^0-9\.,]/', '', $dataset[$i]->cpu) > 2.8) {
+					if (preg_replace('/[^0-9\.,]/', '', $dataset[$i]->cpu) >= 2.8) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 4;
-					} else if (preg_replace('/[^0-9\.,]/', '', $dataset[$i]->cpu) > 2.3) {
+					} else if (preg_replace('/[^0-9\.,]/', '', $dataset[$i]->cpu) >= 2.3) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 3;
-					} else if (preg_replace('/[^0-9\.,]/', '', $dataset[$i]->cpu) > 1.8) {
+					} else if (preg_replace('/[^0-9\.,]/', '', $dataset[$i]->cpu) >= 1.8) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 2;
 					} else {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 1;
@@ -189,11 +189,11 @@ class C_proses extends CI_Controller {
 				}
 				// Kriteria OS
 				if ($j == 6) {
-					if ($dataset[$i]->os > 10) {
+					if ($dataset[$i]->os >= 10) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 4;
-					} else if ($dataset[$i]->os > 9) {
+					} else if ($dataset[$i]->os >= 9) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 3;
-					} else if ($dataset[$i]->os > 8) {
+					} else if ($dataset[$i]->os >= 8) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 2;
 					} else {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 1;
@@ -201,11 +201,11 @@ class C_proses extends CI_Controller {
 				}
 				// Kriteria Baterai
 				if ($j == 7) {
-					if ($dataset[$i]->baterai > 6000) {
+					if ($dataset[$i]->baterai >= 6000) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 4;
-					} else if ($dataset[$i]->baterai > 5000) {
+					} else if ($dataset[$i]->baterai >= 5000) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 3;
-					} else if ($dataset[$i]->baterai > 4000) {
+					} else if ($dataset[$i]->baterai >= 4000) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 2;
 					} else {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 1;
@@ -213,11 +213,11 @@ class C_proses extends CI_Controller {
 				}
 				// Kriteria Harga
 				if ($j == 8) {
-					if ($dataset[$i]->harga > 13000000) {
+					if ($dataset[$i]->harga >= 13000000) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 4;
-					} else if ($dataset[$i]->harga > 9000000) {
+					} else if ($dataset[$i]->harga >= 9000000) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 3;
-					} else if ($dataset[$i]->harga > 5000000) {
+					} else if ($dataset[$i]->harga >= 5000000) {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 2;
 					} else {
 						$subKriteria[$dataset[$i]->id]['subkriteria'][$j] = 1;
@@ -235,7 +235,7 @@ class C_proses extends CI_Controller {
 		}
 		return $subKriteria;
 	}
-	
+
 	// Menghitung Utilities Score dengan Rumus = (Cout-Cmin)/(Cmax-Cmin)
 	public function getValueUtilities($id_kriteria,$hp)
 	{
@@ -244,18 +244,23 @@ class C_proses extends CI_Controller {
 		foreach ($id_kriteria as $key => $value) {
 			$temp_data[] =  $key;
 		}
-		for($i = 0; $i < sizeof($data); $i++) {
+		for ($i = 0; $i < sizeof($data); $i++) {
 			$max = max($data[$hp[$i]]['subkriteria']);
 			$min = min($data[$hp[$i]]['subkriteria']);
-			for ($j = 0; $j < sizeof($id_kriteria); $j++) { 
-				if($j == $temp_data[$j]) {
-					$cout = ($data[$hp[$i]]['subkriteria'][$j] - $min) / ($max - $min);
+			for ($j = 0; $j < sizeof($id_kriteria); $j++) {
+				if ($j == $temp_data[$j]) {
+					if ($j == 9) { // Kriteria dengan ID 9 (misalnya kriteria harga)
+						$cout = ($max - $data[$hp[$i]]['subkriteria'][$j]) / ($max - $min);
+					} else {
+						$cout = ($data[$hp[$i]]['subkriteria'][$j] - $min) / ($max - $min);
+					}
 					$data[$hp[$i]]['value_utilities'][$j] = $cout;
 				}
 			}
 		}
 		return $data;
 	}
+	
 	// Mengalikan Utilities Score dengan Normalisasi
 	public function getScore($id_kriteria,$hp,$bobot)
 	{
@@ -504,7 +509,7 @@ class C_proses extends CI_Controller {
 		} else {
 			$status = FALSE;
 		}
-		$data['title'] = 'Recommendation - Riwayat Pencarian';
+		$data['title'] = 'Riwayat Pencarian';
 		$data['status'] = $status;
 		$this->load->view('template/navbar', $data);
 		$this->load->view('depan/riwayat', $data);

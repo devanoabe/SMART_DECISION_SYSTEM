@@ -32,6 +32,12 @@
 			background-attachment:fixed;
 			opacity: 0.98;
 		}
+		#userNama {
+			/* Gaya atau properti CSS yang diinginkan */
+			font-weight: bold;
+			color: #93f291;
+			/* Tambahan gaya lainnya sesuai kebutuhan */
+		}
 		@media screen and (max-width: 768px) {
 		.colaps{
 			border-radius: 20px
@@ -68,7 +74,7 @@
 							<p class="d-lg-inline small">
 								<?php
 								if ($this->session->userdata('user')) {
-									echo '<i class="fas fa-fw fa-user-circle"></i>&nbsp;'.$this->session->userdata('user')['nama'];
+									echo '<div id="userNama">' . $this->session->userdata('user')['nama'] . '</div>';
 								} else {
 									echo '<h1 style="font-size: 14px; font-weight: bold; color: #333; background-color: #93f291; padding: 10px 20px; border-radius: 20px;">Pilihan</h1>';
 
@@ -78,26 +84,23 @@
 						</a>
 						<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
 							<?php if ($this->session->userdata('user')) { ?>
+								<?php } ?>
 								<a class="dropdown-item" href="#" id="btn_edt_user">
-									<i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
 									Ubah Pengaturan Akun
 								</a>
-							<?php } ?>
 							<?php if ($this->session->userdata('admin')) { ?>
 								<a class="dropdown-item" href="<?= base_url('admin') ?>">
-									<i class="fas fa-home fa-sm fa-fw mr-2 text-gray-400"></i>
 									Menuju Dashboard
+									<i class="fas fa-home fa-sm fa-fw mr-2 text-gray-400"></i>
 								</a>
 							<?php } elseif (!$this->session->userdata('user')) { ?>
 								<a class="dropdown-item" href="<?= base_url('masuk') ?>">
-									<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
 									Login
 								</a>
 							<?php } ?>
 							<div class="dropdown-divider"></div>
 							<?php if ($this->session->userdata('admin') || $this->session->userdata('user')) { ?>
 								<a class="dropdown-item" href="#" onclick="logout();">
-									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
 									Keluar
 								</a>
 							<?php } ?>
